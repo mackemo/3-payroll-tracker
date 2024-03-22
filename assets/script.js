@@ -3,18 +3,15 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 let employees = [];
 
 const collectEmployees = function() {
-  
-
-  addEmployeesBtn.addEventListener('click', function() {
     const firstName = prompt("Enter employee first name:");
     const lastName = prompt("Enter employee last name:");
-    const salary = prompt("Enter employee salary:");
+    let salary = prompt("Enter employee salary:");
 
     if (isNaN(salary)) {
-      salary = 0;
+      salary = ("Enter valid salary:");
     } else {
       salary = parseInt(salary);
-    };
+    }
 
     const employee = {
       firstName: firstName,
@@ -25,12 +22,14 @@ const collectEmployees = function() {
     employees.push(employee);
 
     const addNewEmployee = confirm("Are you adding another employee?");
-        if (!addNewEmployee) {
-          return employees;
-        } 
-  });
-}
-  collectEmployees();
+        if (addNewEmployee) {
+          collectEmployees();
+        } else {
+          console.log(employees);
+        }
+  };
+
+addEmployeesBtn.addEventListener('click', collectEmployees);
 
 
 // Display the average salary
