@@ -1,33 +1,36 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-let employees = [];
 
 const collectEmployees = function() {
-    const firstName = prompt("Enter employee first name:");
-    const lastName = prompt("Enter employee last name:");
-    let salary = prompt("Enter employee salary:");
+  let employeesArray = [];
+
+  while (true) {
+    let employeeData = {
+      firstName: prompt("Enter employee first name:"),
+      lastName: prompt("Enter employee last name:"),
+      salary: parseFloat(prompt("Enter employee salary:")),
+    };
 
     if (isNaN(salary)) {
-      salary = ("Enter valid salary:");
+      salary = prompt("Enter valid salary:");
     } else {
       salary = parseInt(salary);
     }
-
-    const employee = {
-      firstName: firstName,
-      lastName: lastName,
-      salary: salary
-      };
-    
-    employees.push(employee);
-
+      
+    employeesArray.push(employeeData);
+  
     const addNewEmployee = confirm("Are you adding another employee?");
-        if (addNewEmployee) {
-          collectEmployees();
-        } else {
-          console.log(employees);
-        }
-  };
+      if (addNewEmployee) {
+        collectEmployees();
+      } else {
+        break
+      }
+  }
+
+  console.log(employeesArray);
+
+  return employeesArray
+};
 
 addEmployeesBtn.addEventListener('click', collectEmployees);
 
