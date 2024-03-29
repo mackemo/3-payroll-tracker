@@ -2,8 +2,12 @@
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 
 const collectEmployees = function () {
+
+  //created empty array to story employee data
   let employeesArray = [];
   
+
+  //prompts for each data type
   while (true) {
     let employeeData = {
       firstName: prompt("Enter employee first name:"),
@@ -11,41 +15,51 @@ const collectEmployees = function () {
       salary: parseFloat(prompt("Enter employee salary:")),
     };
 
+    //makes sure salary is a number
     employeeData.salary = parseFloat(employeeData.salary)|| 0;
-
+    
+    //if input is not a number, a prompt pops up
     while(isNaN(employeeData.salary)) {
       employeeData.salary = parseFloat(prompt("Please enter valid salary"))
     };
          
+    //add to array
     employeesArray.push(employeeData);
 
+    //prompt for adding new employee and if not, breaks the loop of adding employees
     addNewEmployee = prompt("Are you adding another employee? ('y' or 'n')").toLowerCase();
     if (addNewEmployee === "n") {
       break
     };
   }
 
+  //logs array data into console
   console.log(employeesArray);
 
+  //returns array for functionality
   return employeesArray
 };
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
+  //created var for for loop
   let sum= 0;
 
+  //looping over each employee's salary in the array and adding the salaries
   for(i=0; i < employeesArray.length; i++ ) {
    sum += employeesArray[i].salary;
   }
 
-
+  //creates average salary and logs to console
   let avgSalary = sum / employeesArray.length; 
   console.log(`The employee average salary is ${avgSalary}.`); 
 };
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+  //creates var and selects random employee
   let randomEmp= Math.floor(Math.random()*employeesArray.length); 
+  //logs random employee to console
   console.log(`Congrats to ${employeesArray[randomEmp].firstName} ${employeesArray[randomEmp].lastName}, our random drawing winner!`);
 };
 
