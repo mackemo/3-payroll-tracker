@@ -9,6 +9,8 @@ The third challenge assignment from a bootcamp where the task was to modify star
 
 The process included adding an event listener for when clicking on a button, prompts show up. Employee data that was inputed, stored, and tracked included employee's first and last names and their salaries. I have included the parseInt and isNaN methods for the salary to ensure only numbers were recorded for the salaries. The process also included creating a confirm message. After an employee's data was inputed, a confirm message popped up to ask if user would like to add another employee, if not, a table of displayed of all employees.
 
+<img src="./assets/images/image.png"/>
+
 ## Links
 
 Link to website used for this challenge.
