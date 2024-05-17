@@ -4,6 +4,16 @@
 
 The third challenge assignment from a bootcamp where the task was to modify starter code to create an application that manages employee payroll data.
 
+## Table of Content
+  -[Description](#Description)
+  -[Process](#Process)
+  -[Links](#Links)
+  -[Installation](#Installation)
+  -[Usage](#Usage)
+  -[Licenses](#Licenses)
+  -[Contribution](#Contribution)
+  -[Acknowledgement](#Acknowledgement)
+  -[Questions](#Questions)
 
 ## Process
 
@@ -21,19 +31,19 @@ https://github.com/mackemo/3-payroll-tracker
 
 ## Installation
 
-N/A
+To install this application, copy the ssh key from my github repo and clone it into your respository.
 
 ## Usage
 
 This site was a practice assignment for bootcamp students but can be used to see how a simple website can be created by inspecting the webpage.
 
-## Credits
-
-N/A
-
 ## License
 
 N/A
+
+## Contribution
+
+Contact me by email provided in Questions section.
 
 ## Acknowledgement
 
@@ -48,3 +58,11 @@ https://www.w3schools.com/jsref/jsref_isnan_number.asp
 https://stackoverflow.com/questions/29544371/finding-the-average-of-an-array-using-js
 
 https://stackoverflow.com/questions/5915096/get-a-random-item-from-a-javascript-array
+
+
+## Questions
+ 
+Contact with questions at:
+  
+Email: mackenzielmoore14@gmail.com
+Click [here](https://github.com/mackemo) for Github account.
